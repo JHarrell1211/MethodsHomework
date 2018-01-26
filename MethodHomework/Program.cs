@@ -14,22 +14,21 @@ namespace MethodHomework
             int bigNumb = 0;
             Console.WriteLine("The larger number is " + (Numbers(bigNumb)) + "\n");
 
-            int num = 0;
-            bool trueOrFalse = NumbersTwo(num);
+            int [] numb = new int[2];
+            bool trueOrFalse = NumbersTwo(numb);
             Console.WriteLine("The numbers are equal. " + trueOrFalse + "\n");
 
-            string favFood = " ";
+            string [] favFood = new string [3];
             Console.WriteLine("My favorite foods are " + (Foods(favFood)) + "\n");
 
             int tri = 0;
             Console.WriteLine("The missing side of the triangle is " + (Triangle(tri)));
         }
         //method for question 3
-        static string Foods(string n)
+        static string Foods(string [] names)
         {
             string x = " ";
             int i = 0;
-            string[] names = new string[3];
 
             for (i = 0; i < names.Length; i++)
             {
@@ -45,46 +44,46 @@ namespace MethodHomework
             return x;
         }
         //method for question 1
-        static int Numbers(int num)
+        static int Numbers(int number)
         {
-            int[] numbers = new int[2];
             int i;
             int j = 0;
-            for (i = 0; i < numbers.Length; i++)
+            int[] num = new int[2];
+            for (i = 0; i < num.Length; i++)
             {
                 Console.WriteLine("Enter a number to compare");
-                numbers[i] = int.Parse(Console.ReadLine());
+                num[i] = int.Parse(Console.ReadLine());
             }
-            if (numbers[0] > numbers[1])
+            if (num[0] > num[1])
             {
-                j = numbers[0];
+                j = num[0];
             }
             else
             {
-                j = numbers[1];
+                j = num[1];
             }
             return j;
         }
         //method for question 2
-        static bool NumbersTwo(int equal)
+        static bool NumbersTwo(int[] numbers)
         {
-            int[] numbers = new int[2];
-            int i;
-            bool equal1 = true;
-            for (i = 0; i < numbers.Length; i++)
+            int[] num = new int[2];
+            bool isEqual = true;
+            for (int i = 0; i < num.Length; i++)
             {
                 Console.WriteLine("Enter a number to compare");
-                numbers[i] = int.Parse(Console.ReadLine());
+                num[i] = int.Parse(Console.ReadLine());
             }
-            if (numbers[0] == numbers[1])
+            if (num[0] == num[1])
             {
-                equal1 = true;
+                isEqual = true;
             }
             else
             {
-                equal1 = false;
+                isEqual = false;
             }
-            return equal1;
+            return isEqual;
+            
         }
         //Method for question 4
         static double Triangle(int side)
